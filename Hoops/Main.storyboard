@@ -1373,22 +1373,42 @@
                         <rect key="frame" x="1" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMQ-yx-98P">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="QMQ-yx-98P" secondAttribute="height" multiplier="1:1" id="PAo-b6-hWn"/>
-                                </constraints>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yaU-yI-zXe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="QMQ-yx-98P" secondAttribute="centerX" constant="38" id="Gam-pG-DnH"/>
-                            <constraint firstAttribute="centerY" secondItem="QMQ-yx-98P" secondAttribute="centerY" constant="-18.5" id="KkP-T9-cuw"/>
+                            <constraint firstItem="yaU-yI-zXe" firstAttribute="top" secondItem="bKI-pf-07P" secondAttribute="bottom" constant="-12" id="DFn-ec-3JK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yaU-yI-zXe" secondAttribute="trailing" constant="-22" id="DMd-Fx-WJ9"/>
+                            <constraint firstItem="rtp-g1-FrD" firstAttribute="top" secondItem="yaU-yI-zXe" secondAttribute="bottom" constant="-7" id="Fjl-jp-Pnk"/>
+                            <constraint firstItem="yaU-yI-zXe" firstAttribute="leading" secondItem="bbT-Fg-bDF" secondAttribute="leadingMargin" constant="-22" id="KvA-rQ-Xhn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yaU-yI-zXe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DFn-ec-3JK"/>
+                                <exclude reference="DMd-Fx-WJ9"/>
+                                <exclude reference="KvA-rQ-Xhn"/>
+                                <exclude reference="Fjl-jp-Pnk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yaU-yI-zXe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="DFn-ec-3JK"/>
+                                <include reference="DMd-Fx-WJ9"/>
+                                <include reference="KvA-rQ-Xhn"/>
+                                <include reference="Fjl-jp-Pnk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="photoButton" destination="QMQ-yx-98P" id="1g3-Vt-U1k"/>
+                        <outlet property="photoImage" destination="yaU-yI-zXe" id="bIc-ZU-1PB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBz-kX-FDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
