@@ -67,7 +67,10 @@ class TabBarViewController: UITabBarController {
         //UITabBarItem tabBarItem1 = tabBar.
     }
     
+    
+    // 19.11.2014 auskommentiert
     // Image Resize
+    /*
     func RBSquareImageTo(image: UIImage, size: CGSize) -> UIImage {
         return RBResizeImage(RBSquareImage(image), targetSize: size)
     }
@@ -117,5 +120,6 @@ class TabBarViewController: UITabBarController {
         
         return newImage
     }
+    */
     
 }
