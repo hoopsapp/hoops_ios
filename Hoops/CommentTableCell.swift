@@ -20,12 +20,12 @@ class CommentTableCell : UITableViewCell{
     
     @IBAction func noLikesButtonTapped(sender: AnyObject) {
         comment!.like()
-
+        noLikesButton.selected = !reportButton.selected
     }
     
     @IBAction func reportButtonTapped(sender: AnyObject) {
         comment!.flag()
-
+        reportButton.selected = !reportButton.selected
     }
     
     required init(coder aDecoder: NSCoder) {
