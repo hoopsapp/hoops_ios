@@ -10,6 +10,7 @@ import UIKit
 
 class HoopsViewController: ViewController, UITableViewDelegate, UITableViewDataSource{
    
+    let hoopsColor = UIColor(red: 4.0/255.0, green: 165.0/255.0, blue: 182.0/255.0, alpha: 1.0)
     @IBOutlet var followedButton: UIButton!
     @IBOutlet var nearbyButton: UIButton!
     @IBOutlet var hottestButton: UIButton!
@@ -25,6 +26,10 @@ class HoopsViewController: ViewController, UITableViewDelegate, UITableViewDataS
         notifCenter.addObserver(self, selector: "reloadFeed", name: hashtagFeed?.notificationName, object: nil)
         FeedFactory.instance().activateHashtagFeed(hashtagFeed!)
         reloadFeed()
+        
+        hottestButton.setTitleColor(hoopsColor, forState: UIControlState.Normal)
+        nearbyButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        followedButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
     }
     
     @IBAction func nearbyButtonTapped(sender: AnyObject) {
@@ -34,6 +39,10 @@ class HoopsViewController: ViewController, UITableViewDelegate, UITableViewDataS
         notifCenter.addObserver(self, selector: "didReceiveLocationPermissionNeededNotification:", name: "location_permission_needed", object: nil)
         FeedFactory.instance().activateHashtagFeed(hashtagFeed!)
         reloadFeed()
+
+        nearbyButton.setTitleColor(hoopsColor, forState: UIControlState.Normal)
+        hottestButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        followedButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
     }
     
     @IBAction func followedButtonTapped(sender: AnyObject) {
@@ -43,6 +52,10 @@ class HoopsViewController: ViewController, UITableViewDelegate, UITableViewDataS
         FeedFactory.instance().activateHashtagFeed(hashtagFeed!)
         reloadFeed()
         //followedTags = hashtagFeed!.toArray()
+        
+        followedButton.setTitleColor(hoopsColor, forState: UIControlState.Normal)
+        nearbyButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        hottestButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
     }
     
     // #pragma mark - Segues
