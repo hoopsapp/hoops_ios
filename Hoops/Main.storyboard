@@ -43,8 +43,7 @@
                                         <exclude reference="iK4-Fe-D1g"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="36" y="550" width="30" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="0Rz-7S-xn2"/>
                                         <include reference="iK4-Fe-D1g"/>
@@ -73,8 +72,7 @@
                                         <exclude reference="I2s-EF-zg7"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="319" y="550" width="60" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="4Ut-mL-q7B"/>
                                         <exclude reference="DaF-AV-C4P"/>
@@ -99,9 +97,8 @@
                                         <exclude reference="TaS-w1-5a4"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                    <rect key="frame" x="21" y="63" width="358" height="160"/>
                                     <mask key="constraints">
                                         <include reference="TaS-w1-5a4"/>
                                     </mask>
@@ -137,9 +134,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="41" y="25" width="338" height="28"/>
-                                </variation>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLS-0E-rz2">
                                 <rect key="frame" x="21" y="294" width="128" height="128"/>
@@ -155,8 +149,7 @@
                                         <exclude reference="TmY-IY-bfL"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="21" y="402" width="128" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="M2n-i9-yIP"/>
                                         <include reference="OOM-GE-wq5"/>
@@ -753,9 +746,6 @@
                                 <rect key="frame" x="178" y="16" width="147" height="257"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="120" width="400" height="436"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="3rY-lK-YxS" id="tso-1J-vyS"/>
                                     <outlet property="delegate" destination="3rY-lK-YxS" id="Qpa-XL-Z7D"/>
@@ -1521,76 +1511,6 @@
             </objects>
             <point key="canvasLocation" x="-4308" y="443"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="us2-fW-O0w">
-            <objects>
-                <viewController id="H00-UP-dFG" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j50-vG-tdc"/>
-                        <viewControllerLayoutGuide type="bottom" id="uzl-ju-rF9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GOV-e5-2Kq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T5H-hT-rxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="jg5-jQ-3XN">
-            <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="dJK-an-DE8" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fvg-jQ-XM2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="by4-iT-eFu">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="by4-iT-eFu" id="Gcf-Nk-W4B">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="dJK-an-DE8" id="q3b-Nd-H2p"/>
-                            <outlet property="delegate" destination="dJK-an-DE8" id="eww-iu-H1G"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="aKB-Mu-IPG"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NnL-6k-rFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kc4-RI-6UQ">
-            <objects>
-                <navigationController id="bPa-Mo-dZB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9bq-I2-fQ4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="dJK-an-DE8" kind="relationship" relationship="rootViewController" id="HRt-mo-7Wu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="22k-aZ-4Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Split View Controller-->
-        <scene sceneID="JU8-45-UAC">
-            <objects>
-                <splitViewController id="P3C-c1-1aA" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="bPa-Mo-dZB" kind="relationship" relationship="masterViewController" id="IJ6-zx-ua7"/>
-                        <segue destination="H00-UP-dFG" kind="relationship" relationship="detailViewController" id="b0B-bq-Axv"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sYe-d5-Coc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="Thumbs-Up.png" width="64" height="64"/>
@@ -1609,9 +1529,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="a3i-vc-sP9"/>
-        <segue reference="dwf-c0-2IL"/>
-        <segue reference="XSM-Gr-X0F"/>
-        <segue reference="uOc-X7-xcH"/>
+        <segue reference="zxI-3v-agA"/>
+        <segue reference="qDo-2V-wN8"/>
+        <segue reference="xi6-Yi-QJQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
 </document>
