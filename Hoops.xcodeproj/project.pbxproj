@@ -80,6 +80,7 @@
 		D832E56019EFDA3400C6E376 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E55F19EFDA3400C6E376 /* PhotoViewController.swift */; };
 		D832E56319EFDA8C00C6E376 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E56219EFDA8C00C6E376 /* VideoViewController.swift */; };
 		D832E56619F1551600C6E376 /* IMG_5764.MOV in Resources */ = {isa = PBXBuildFile; fileRef = D832E56519F1551600C6E376 /* IMG_5764.MOV */; };
+		D8393D031A1D018800319631 /* Thumbs-Up_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = D8393D021A1D018800319631 /* Thumbs-Up_filled.png */; };
 		D85017DA19E3D3CF00E65070 /* e-hash-03.png in Resources */ = {isa = PBXBuildFile; fileRef = D85017D919E3D3CF00E65070 /* e-hash-03.png */; };
 		D85A84B119A33DAD007EAE9D /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85A84B019A33DAD007EAE9D /* NavigationViewController.swift */; };
 		D85DE3B819AC79A700AAA5AE /* FeedNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85DE3B719AC79A700AAA5AE /* FeedNavigationViewController.swift */; };
@@ -244,6 +245,7 @@
 		D832E55F19EFDA3400C6E376 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		D832E56219EFDA8C00C6E376 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		D832E56519F1551600C6E376 /* IMG_5764.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_5764.MOV; sourceTree = "<group>"; };
+		D8393D021A1D018800319631 /* Thumbs-Up_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thumbs-Up_filled.png"; sourceTree = "<group>"; };
 		D85017D919E3D3CF00E65070 /* e-hash-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e-hash-03.png"; sourceTree = "<group>"; };
 		D85A84B019A33DAD007EAE9D /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		D85DE3B719AC79A700AAA5AE /* FeedNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedNavigationViewController.swift; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 				D85DE3C019AC87AD00AAA5AE /* search.png */,
 				D8B636A919C1180F009A4806 /* thickerseparationline(mockup3).png */,
 				D8B6369D19C0F5BE009A4806 /* Thumbs-Up.png */,
+				D8393D021A1D018800319631 /* Thumbs-Up_filled.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				D8E1D1A419C08472003DE01C /* image@2x.png in Resources */,
 				D8E1D1A519C08472003DE01C /* image.png in Resources */,
 				D8B636A819C10B10009A4806 /* circle_close_delete.png in Resources */,
+				D8393D031A1D018800319631 /* Thumbs-Up_filled.png in Resources */,
 				D8283CAF19BD183A0062B6B1 /* CommentTableCell.xib in Resources */,
 				D89512231A0410B9002F2312 /* flag_new.png in Resources */,
 				D85DE3CD19AC87BB00AAA5AE /* settings.png in Resources */,
@@ -930,7 +934,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Hoops;
-				PROVISIONING_PROFILE = "83ea38cf-e0d6-4b52-b831-92066e35f01c";
+				PROVISIONING_PROFILE = "4efe9c70-20dc-43a5-83d8-40c35bb96d4c";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoops/Hoops-Bridging-Header.h";
 			};
 			name = Debug;
@@ -953,7 +957,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Hoops;
-				PROVISIONING_PROFILE = "83ea38cf-e0d6-4b52-b831-92066e35f01c";
+				PROVISIONING_PROFILE = "4efe9c70-20dc-43a5-83d8-40c35bb96d4c";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoops/Hoops-Bridging-Header.h";
 			};
 			name = Release;
