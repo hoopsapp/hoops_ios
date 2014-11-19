@@ -41,7 +41,6 @@ class PostTableCell : UITableViewCell {
     
     @IBAction func noLikesButtonTapped(sender: AnyObject) {
         post!.like()
-        noLikesButton.selected = !noLikesButton.selected
     }
     
     func loadItem(post:Post, viewController: UIViewController) {
