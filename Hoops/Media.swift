@@ -136,7 +136,6 @@ class Media:NSObject{
         }
         .response { (request, response, _, error) in
             var err: NSError?
-            NSLog(localURL!.description)
 
             self.file = NSData(contentsOfURL: localURL! ,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
             self.notifCenter.postNotificationName(self.kFileDownloadedNotification, object: self)
