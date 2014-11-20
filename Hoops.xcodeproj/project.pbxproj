@@ -938,7 +938,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Hoops;
-				PROVISIONING_PROFILE = "e2208a29-0351-49ce-b6c1-48a5378db169";
+				PROVISIONING_PROFILE = "4efe9c70-20dc-43a5-83d8-40c35bb96d4c";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoops/Hoops-Bridging-Header.h";
 			};
 			name = Debug;
@@ -961,7 +961,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Hoops;
-				PROVISIONING_PROFILE = "e2208a29-0351-49ce-b6c1-48a5378db169";
+				PROVISIONING_PROFILE = "4efe9c70-20dc-43a5-83d8-40c35bb96d4c";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hoops/Hoops-Bridging-Header.h";
 			};
 			name = Release;
