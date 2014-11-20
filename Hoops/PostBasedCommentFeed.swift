@@ -23,6 +23,14 @@ class PostBasedCommentFeed:CommentFeed{
         super.subscribe()
     }
     
+    override func unsubscribe() {
+        if(!active){
+            client.removeSubscription("comments")
+        }
+        super.unsubscribe()
+    }
+    
+    
     override func alterElementBeforeAdding(comment: Comment) {
 
     }

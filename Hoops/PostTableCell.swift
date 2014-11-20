@@ -19,6 +19,7 @@ class PostTableCell : UITableViewCell {
     @IBOutlet var rehashButton      : UIButton!
     @IBOutlet var reportButton      : UIButton!
     
+    var notifCenter: NSNotificationCenter = NSNotificationCenter.defaultCenter()
     var viewController : UIViewController?
     var post : Post?
     
@@ -28,7 +29,6 @@ class PostTableCell : UITableViewCell {
     
     @IBAction func reportButtonTapped(sender: AnyObject) {
         post!.flag()
-        reportButton.selected = !reportButton.selected
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -44,7 +44,7 @@ class PostTableCell : UITableViewCell {
     }
     
     func loadItem(post:Post, viewController: UIViewController) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReceivePostChangedNotification:", name: post.kItemChangedNotification, object: post)
+        notifCenter.addObserver(self, selector: "didReceivePostChangedNotification:", name: post.kItemChangedNotification, object: post)
 
         // like Button appearance
         let thumbImageGray = UIImage(named: "Thumbs-Up.png")
@@ -71,7 +71,8 @@ class PostTableCell : UITableViewCell {
         noLikesLabel.text    = String(post.likeCount)
         timeLabel.text       = activityTime.toString()
         noCommentsLabel.text = String(post.commentCount)
-        noLikesButton.selected = post.likedByUser
+        noLikesButton.selected  = post.likedByUser
+        reportButton.selected   = post.flaggedByUser
     }
     
     func didReceivePostChangedNotification(note: NSNotification){

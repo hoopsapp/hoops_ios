@@ -12,8 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
-
-    //var postFeed = PostFeed(client: HoopsClient.instance())
     
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
@@ -28,8 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.setBool(false, forKey: "firstLaunch")
         }
         
-        //make sure current user is loaded
-        User.currentUser()
         return true
     }
 

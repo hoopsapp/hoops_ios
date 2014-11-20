@@ -109,7 +109,7 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
     }
     
     override func viewWillDisappear(animated: Bool) {
-        //feed!.unsubscribe()
+        feed!.unsubscribe()
     }
     
     override func didReceiveMemoryWarning() {
