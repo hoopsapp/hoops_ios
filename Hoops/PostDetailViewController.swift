@@ -32,6 +32,9 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
         commentObj.saveToDb()
         commentField.resignFirstResponder()
         commentField.text = ""
+        
+        // call textField so that the counter of the commentField is updated 
+        textField(commentField, shouldChangeCharactersInRange: NSMakeRange(0, 0), replacementString: "")
     }
     
     @IBAction func handleRecoginzer(sender: AnyObject) {

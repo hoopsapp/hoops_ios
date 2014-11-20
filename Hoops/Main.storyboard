@@ -43,8 +43,7 @@
                                         <exclude reference="iK4-Fe-D1g"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="36" y="550" width="30" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="0Rz-7S-xn2"/>
                                         <include reference="iK4-Fe-D1g"/>
@@ -73,8 +72,7 @@
                                         <exclude reference="I2s-EF-zg7"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="519" y="550" width="60" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="4Ut-mL-q7B"/>
                                         <exclude reference="DaF-AV-C4P"/>
@@ -84,6 +82,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="sendTapped:" destination="DRK-Bj-4Gv" eventType="touchUpInside" id="66F-MX-LzC"/>
+                                    <segue destination="fgr-jQ-g4J" kind="show" identifier="writePostViewToFeedViewControllerSegue" id="bNA-9F-nZu"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Type your post.." translatesAutoresizingMaskIntoConstraints="NO" id="e0l-7I-CUa">
@@ -98,9 +97,8 @@
                                         <exclude reference="TaS-w1-5a4"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                    <rect key="frame" x="21" y="63" width="558" height="249"/>
                                     <mask key="constraints">
                                         <include reference="TaS-w1-5a4"/>
                                     </mask>
@@ -151,8 +149,7 @@
                                         <exclude reference="TmY-IY-bfL"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="21" y="402" width="128" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="M2n-i9-yIP"/>
                                         <include reference="OOM-GE-wq5"/>
@@ -176,8 +173,7 @@
                                         <exclude reference="lT8-Ey-bun"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="552" y="28" width="20" height="21"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Y2n-cS-3v5"/>
                                         <include reference="lT8-Ey-bun"/>
@@ -199,8 +195,7 @@
                                         <exclude reference="Uh9-Dn-7Ry"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="547" y="291" width="30" height="21"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="G8o-PG-uMS"/>
                                         <include reference="Uh9-Dn-7Ry"/>
@@ -311,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dX-9T-Ewr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.5" y="-1847.25"/>
+            <point key="canvasLocation" x="-382.5" y="-1580.25"/>
         </scene>
         <!--Feed-->
         <scene sceneID="rTO-D9-2i7">
@@ -383,7 +378,8 @@
                                         <exclude reference="h0p-gM-2Kg"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="70" y="34" width="100" height="20"/>
                                     <mask key="constraints">
                                         <include reference="a3v-fr-54w"/>
                                         <include reference="h0p-gM-2Kg"/>
@@ -408,7 +404,8 @@
                                         <exclude reference="Gt2-Hf-T5Z"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="94" width="17" height="17"/>
                                     <mask key="constraints">
                                         <include reference="DgM-sJ-Wgs"/>
                                         <include reference="Gt2-Hf-T5Z"/>
@@ -433,7 +430,8 @@
                                         <exclude reference="sS5-M2-M4D"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="34" width="31" height="21"/>
                                     <mask key="constraints">
                                         <include reference="J2T-DB-5nG"/>
                                         <include reference="sS5-M2-M4D"/>
@@ -455,7 +453,8 @@
                                         <exclude reference="is7-p4-YhH"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="48" y="34" width="20" height="20"/>
                                     <mask key="constraints">
                                         <include reference="0jx-bR-WGX"/>
                                         <include reference="is7-p4-YhH"/>
@@ -477,7 +476,8 @@
                                         <exclude reference="vrZ-VZ-BBB"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="60" width="300" height="30"/>
                                     <mask key="constraints">
                                         <include reference="h4X-NK-9h9"/>
                                         <include reference="vrZ-VZ-BBB"/>
@@ -499,7 +499,8 @@
                                         <exclude reference="env-Wb-FfZ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="357" y="34" width="23" height="20"/>
                                     <mask key="constraints">
                                         <include reference="WXb-re-HCY"/>
                                         <include reference="env-Wb-FfZ"/>
@@ -521,7 +522,8 @@
                                         <exclude reference="Sah-2Y-ewf"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="38" y="92" width="69" height="20"/>
                                     <mask key="constraints">
                                         <include reference="MJd-n9-1tE"/>
                                         <include reference="Sah-2Y-ewf"/>
@@ -543,7 +545,8 @@
                                         <exclude reference="Iai-5O-91u"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="117" y="92" width="17" height="17"/>
                                     <mask key="constraints">
                                         <include reference="Cji-wC-z2Q"/>
                                         <include reference="Iai-5O-91u"/>
@@ -568,7 +571,8 @@
                                         <exclude reference="pUE-Xs-oNI"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="189" y="92" width="17" height="17"/>
                                     <mask key="constraints">
                                         <include reference="hmt-K8-f7z"/>
                                         <include reference="pUE-Xs-oNI"/>
@@ -593,7 +597,8 @@
                                         <exclude reference="YAi-ZB-V48"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="216" y="92" width="17" height="17"/>
                                     <mask key="constraints">
                                         <include reference="3PD-6a-ail"/>
                                         <include reference="YAi-ZB-V48"/>
@@ -615,7 +620,8 @@
                                         <exclude reference="jiu-do-5mv"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="26" y="117" width="358" height="2"/>
                                     <mask key="constraints">
                                         <include reference="EZt-RH-L2S"/>
                                         <include reference="jiu-do-5mv"/>
@@ -637,7 +643,8 @@
                                         <exclude reference="oAV-aY-Lys"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="139" y="92" width="40" height="20"/>
                                     <mask key="constraints">
                                         <include reference="ke0-Rb-5Fb"/>
                                         <include reference="oAV-aY-Lys"/>
@@ -751,6 +758,9 @@
                                 <rect key="frame" x="178" y="16" width="147" height="257"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="120" width="400" height="636"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="3rY-lK-YxS" id="tso-1J-vyS"/>
                                     <outlet property="delegate" destination="3rY-lK-YxS" id="Qpa-XL-Z7D"/>
@@ -1536,9 +1546,9 @@
         <image name="thickerseparationline(mockup3).png" width="501" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zxI-3v-agA"/>
-        <segue reference="oKQ-Ez-X4h"/>
+        <segue reference="bNA-9F-nZu"/>
         <segue reference="xi6-Yi-QJQ"/>
+        <segue reference="oKQ-Ez-X4h"/>
         <segue reference="qDo-2V-wN8"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
