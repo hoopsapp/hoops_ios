@@ -140,7 +140,16 @@ class WritePostViewController: ViewController, UINavigationControllerDelegate,  
         self.photoImageToBottomConstraint.constant = 20
         self.sendImageToBottomConstraint.constant = 20
     }
-
+    
+    
+    // #pragma mark - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "writePostViewToFeedViewControllerSegue"{
+            let vc = segue.destinationViewController as FeedTableViewController
+            return
+        }
+    }
     
     @IBAction func uploadButtonTapped(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){

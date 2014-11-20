@@ -9,6 +9,7 @@
 import UIKit
 
 class PostDetailViewController: ViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
+    @IBOutlet var reportButton: UIButton!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var userLabel: UILabel!
     @IBOutlet var hashtagButton: UIButton!
@@ -19,7 +20,6 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
     @IBOutlet var noLikesButton: UIButton!
     @IBOutlet var noLikesLabel: UILabel!
     @IBOutlet var letterCounterLabel: UILabel!
-    //@IBOutlet var bottomConstraint: NSLayoutConstraint!
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var commentField: UITextField!
     @IBOutlet var grayBoxToBottomConstraint: NSLayoutConstraint!
@@ -32,6 +32,9 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
         commentObj.saveToDb()
         commentField.resignFirstResponder()
         commentField.text = ""
+        
+        // call textField so that the counter of the commentField is updated 
+        textField(commentField, shouldChangeCharactersInRange: NSMakeRange(0, 0), replacementString: "")
     }
     
     @IBAction func handleRecoginzer(sender: AnyObject) {
@@ -40,10 +43,12 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
     
     @IBAction func reportButtonTapped(sender: AnyObject) {
         post!.flag()
+        reportButton.selected = !reportButton.selected
     }
     
     @IBAction func noLikesButtonTapped(sender: AnyObject) {
         post!.like()
+        noLikesButton.selected = !noLikesButton.selected
     }
     
     @IBAction func noCommentsButtonTapped(sender: AnyObject) {
@@ -86,10 +91,21 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
         
         commentField.delegate = self
     }
-
     
     override func viewWillAppear(animated: Bool) {
         FeedFactory.instance().activateCommentFeed(feed!)
+        
+        // like Button appearance
+        let thumbImageGray = UIImage(named: "Thumbs-Up.png")
+        let thumbImageColored = UIImage(named: "Thumbs-Up_filled.png")
+        noLikesButton.setImage(thumbImageGray, forState: UIControlState.Normal)
+        noLikesButton.setImage(thumbImageColored, forState: UIControlState.Selected)
+        
+        // flag Button appearance
+        let flagImageGray = UIImage(named: "flag_new.png")
+        let flagImageColored = UIImage(named: "flag_newpushed.png")
+        reportButton.setImage(flagImageGray, forState: UIControlState.Normal)
+        reportButton.setImage(flagImageColored, forState: UIControlState.Selected)
     }
     
     override func viewWillDisappear(animated: Bool) {

@@ -17,7 +17,7 @@ class NavigationController: UINavigationController {
         navigationBar.barTintColor  = UIColor(red: 4.0/255.0, green: 165.0/255.0, blue: 182.0/255.0, alpha: 1.0)
         navigationBar.translucent   = true
               
-        // change navigationbar font color to grey
+        // change navigationbar font color to white
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
 }
