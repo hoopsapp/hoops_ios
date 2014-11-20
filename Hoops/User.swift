@@ -23,7 +23,7 @@ class User:CollectionItem{
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveChangedUpdate:", name: "users_changed", object: nil)
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveRemovedUpdate:", name: "users_removed", object: nil)
             
-            HoopsClient.instance().addSubscription("followes")
+            //HoopsClient.instance().addSubscription("followes")
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveFollowAddedUpdate:", name: "followes_added", object: nil)
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveFollowRemovedUpdate:", name: "followes_removed", object: nil)
             

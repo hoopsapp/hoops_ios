@@ -155,7 +155,7 @@ class Media:NSObject{
     func getS3UploadPolicy(){
         let username    = User.currentUser().name
         let fileExt     = typeToFileExt(type)
-        var paramArr    = ["\(username)_\(type).\(fileExt)"]
+        var paramArr    = ["\(username)_\(type.rawValue).\(fileExt)"]
         HoopsClient.instance().callMethodName("s3Upload", parameters: paramArr, responseCallback: {(response, error) -> Void in
             if(error != nil) {
                 NSLog("Error on upload to s3: \(error?.description)")
