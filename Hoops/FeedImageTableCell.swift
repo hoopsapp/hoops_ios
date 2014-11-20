@@ -11,6 +11,7 @@ import UIKit
 class FeedImageTableCell : FeedTableCell {
     @IBOutlet var photoButton: UIButton!
     var photoData: UIImage!
+    var mediaFile: Media?
     
     @IBAction func photoTapped(sender: AnyObject) {
         //viewController!.performSegueWithIdentifier("feedToVideoViewSegue", sender: self)
@@ -32,13 +33,21 @@ class FeedImageTableCell : FeedTableCell {
         if(post.type == Post.PostType.Image){
             let imageFile   = UIImage(named: "placeholder.png")
             photoButton.setBackgroundImage(imageFile, forState: UIControlState.Normal)
-            }
+            
+            //download image
+            mediaFile = Media(filename: post.file!, type: post.type)
+            notifCenter.addObserver(self, selector: "displayImage:", name: mediaFile!.kFileDownloadedNotification, object: mediaFile!)
+            mediaFile!.download()
+        }
         
         if(post.type == Post.PostType.Video){
                 let imageFile   = UIImage(named: "placeholder_video.png")
                 photoButton.setBackgroundImage(imageFile, forState: UIControlState.Normal)
-            }
         }
-        //TODO: change image to real placeholder image
-        //TODO: cell height is too high if no image is attached (always same height)
+    }
+
+    func displayImage(note: NSNotification){
+        let imageObj = UIImage(data: mediaFile!.file!)
+        photoButton.setBackgroundImage(imageObj, forState: UIControlState.Normal)
+    }
 }

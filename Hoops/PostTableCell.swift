@@ -19,6 +19,7 @@ class PostTableCell : UITableViewCell {
     @IBOutlet var rehashButton      : UIButton!
     @IBOutlet var reportButton      : UIButton!
     
+    var notifCenter: NSNotificationCenter = NSNotificationCenter.defaultCenter()
     var viewController : UIViewController?
     var post : Post?
     
@@ -43,7 +44,7 @@ class PostTableCell : UITableViewCell {
     }
     
     func loadItem(post:Post, viewController: UIViewController) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReceivePostChangedNotification:", name: post.kItemChangedNotification, object: post)
+        notifCenter.addObserver(self, selector: "didReceivePostChangedNotification:", name: post.kItemChangedNotification, object: post)
 
         // like Button appearance
         let thumbImageGray = UIImage(named: "Thumbs-Up.png")

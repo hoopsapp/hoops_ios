@@ -15,7 +15,7 @@ class PhotoViewController: ViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        notifCenter.addObserver(self, selector: "displayImage:", name: image!.kFileDownloadedNotification, object: nil)
+        notifCenter.addObserver(self, selector: "displayImage:", name: image!.kFileDownloadedNotification, object: image!)
         image!.download()
     }
     

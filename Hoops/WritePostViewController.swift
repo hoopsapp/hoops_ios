@@ -174,7 +174,7 @@ class WritePostViewController: ViewController, UINavigationControllerDelegate,  
             if fileType != nil{
                 var media : Media
                 if fileType == (kUTTypeImage as NSString){
-                    media = Media(file:NSData(data:UIImagePNGRepresentation(image)), type:Post.PostType.Image)
+                    media = Media(file:NSData(data:UIImageJPEGRepresentation(image, 0.9)), type:Post.PostType.Image)
                 }else{
                     let videoData = NSData(contentsOfMappedFile: video!.path!)
                     media = Media(file: videoData!, type:Post.PostType.Video)

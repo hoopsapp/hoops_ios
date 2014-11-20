@@ -74,17 +74,17 @@ class Media:NSObject{
     
     func typeToMimeType(type: Post.PostType)->String{
         switch(type){
-        case Post.PostType.Image: return "image/png"
+        case Post.PostType.Image: return "image/jpeg"
         case Post.PostType.Video: return "video/mp4"
-        default: return "image/png"
+        default: return "image/jpeg"
         }
     }
     
     func typeToFileExt(type: Post.PostType)->String{
         switch(type){
-        case Post.PostType.Image: return "png"
+        case Post.PostType.Image: return "jpeg"
         case Post.PostType.Video: return "mp4"
-        default: return "image/png"
+        default: return "jpeg"
         }
     }
 
