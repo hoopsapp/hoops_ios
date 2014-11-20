@@ -110,7 +110,7 @@ class Schema{
             case "type"                 : jsonPost.type                 = val as String
             case "file"                 : jsonPost.file                 = val as String
             case "flags"                : jsonPost.flags                = val as [String]
-            case "flagCount"            : jsonPost.flagCount            = val as Int //TODO: FlagCount = Deprecated
+            case "flagCount"            : jsonPost.flagCount            = val as Int
             case "likeCount"            : jsonPost.likeCount            = val as Int
             case "flaggedAt"          : dateFlagged                     = (val as [String:AnyObject])
             case "createdAt"            : dateCre                       = (val as [String:AnyObject])

@@ -28,7 +28,6 @@ class PostTableCell : UITableViewCell {
     
     @IBAction func reportButtonTapped(sender: AnyObject) {
         post!.flag()
-        reportButton.selected = !reportButton.selected
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -71,7 +70,8 @@ class PostTableCell : UITableViewCell {
         noLikesLabel.text    = String(post.likeCount)
         timeLabel.text       = activityTime.toString()
         noCommentsLabel.text = String(post.commentCount)
-        noLikesButton.selected = post.likedByUser
+        noLikesButton.selected  = post.likedByUser
+        reportButton.selected   = post.flaggedByUser
     }
     
     func didReceivePostChangedNotification(note: NSNotification){

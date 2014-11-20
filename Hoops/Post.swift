@@ -19,6 +19,7 @@ class Post:CollectionItem{
     var commentCount: Int               = 0
     
     var likedByUser : Bool              = false
+    var flaggedByUser: Bool             = false
  
     var location    : (Double, Double)?             //0 => Long, 1 => Lat
     var file        : String?
@@ -63,6 +64,15 @@ class Post:CollectionItem{
         if(jsonPost.file != ""){
             self.file       = jsonPost.file
         }
+        
+        let user = User.currentUser()
+        for flag in jsonPost.flags{
+            if flag == user.id{
+                flaggedByUser = true
+                break
+            }
+        }
+        
         /*
         if(jsonPost.position != LocationHelper.instance().kInvalidLocation){
             self.location   = jsonPost.position
@@ -138,6 +148,8 @@ class Post:CollectionItem{
         flagCount = updPost.flagCount
         likeCount = updPost.likeCount
         commentCount = updPost.commentCount
+        flaggedByUser = updPost.flaggedByUser
+        likedByUser = updPost.likedByUser
         NSNotificationCenter.defaultCenter().postNotificationName(kItemChangedNotification, object: self)
     }
 }
