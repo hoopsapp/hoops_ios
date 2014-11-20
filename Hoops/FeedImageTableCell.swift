@@ -47,7 +47,9 @@ class FeedImageTableCell : FeedTableCell {
     }
 
     func displayImage(note: NSNotification){
-        let imageObj = UIImage(data: mediaFile!.file!)
-        photoButton.setBackgroundImage(imageObj, forState: UIControlState.Normal)
+        if let file = mediaFile!.file{
+            let imageObj = UIImage(data: mediaFile!.file!)
+            photoButton.setBackgroundImage(imageObj, forState: UIControlState.Normal)
+        }
     }
 }
