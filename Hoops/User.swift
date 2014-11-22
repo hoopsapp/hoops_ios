@@ -23,11 +23,11 @@ class User:CollectionItem{
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveChangedUpdate:", name: "users_changed", object: nil)
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveRemovedUpdate:", name: "users_removed", object: nil)
             
-            //HoopsClient.instance().addSubscription("followes")
+            //subscribe to followes
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveFollowAddedUpdate:", name: "followes_added", object: nil)
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveFollowRemovedUpdate:", name: "followes_removed", object: nil)
             
-            //HoopsClient.instance().addSubscription("likes")
+            //subscribe to likes
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveLikeAddedUpdate:", name: "likes_added", object: nil)
             NSNotificationCenter.defaultCenter().addObserver(_currentUser, selector: "didReceiveLikeRemovedUpdate:", name: "likes_removed", object: nil)
         }
@@ -109,7 +109,10 @@ class User:CollectionItem{
     
     func didReceiveLikeAddedUpdate(note: NSNotification!){
         let like = Schema.likeFrom(note.userInfo!)
+        let dict = ["likedByUser":true]
+        let notif = (like.post == "") ? "\(like.comment)_comment" : "\(like.post)_post"
         likes.append(like)
+        notifCenter.postNotificationName(notif, object: dict)
     }
     
     func didReceiveLikeRemovedUpdate(note:NSNotification!){

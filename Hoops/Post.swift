@@ -73,10 +73,17 @@ class Post:CollectionItem{
             }
         }
         
+        notifCenter.addObserver(self, selector: "updatePost:", name: "\(self.id)_post", object: nil)
+        
+        
         /*
         if(jsonPost.position != LocationHelper.instance().kInvalidLocation){
             self.location   = jsonPost.position
         }*/
+    }
+    
+    deinit{
+        notifCenter.removeObserver(self)
     }
     
     func like(){
@@ -86,7 +93,6 @@ class Post:CollectionItem{
                 //TODO: call error handling function / do error handling
                 NSLog("Error on post like: \(error?.description)")
                 return
-                
             }
             NSLog(response.description)
         })
@@ -99,7 +105,6 @@ class Post:CollectionItem{
                 //TODO: call error handling function / do error handling
                 NSLog("Error on post flag: \(error?.description)")
                 return
-                
             }
             NSLog(response.description)
         })
@@ -109,7 +114,6 @@ class Post:CollectionItem{
     //saves changes to the server
     func saveToDb()->Void{
         if(id == ""){
-            
             //check if hashtag id is set, if not use name (server will take care of it)
             var tag = hashtag.0
             if(tag == ""){
@@ -144,13 +148,19 @@ class Post:CollectionItem{
     }
     
     func updateFromPost(updPost:Post){
-        flaggedAt = updPost.flaggedAt
-        flagCount = updPost.flagCount
-        likeCount = updPost.likeCount
-        commentCount = updPost.commentCount
-        flaggedByUser = updPost.flaggedByUser
-        likedByUser = updPost.likedByUser
-        NSNotificationCenter.defaultCenter().postNotificationName(kItemChangedNotification, object: self)
+        flaggedAt       = updPost.flaggedAt
+        flagCount       = updPost.flagCount
+        likeCount       = updPost.likeCount
+        commentCount    = updPost.commentCount
+        flaggedByUser   = updPost.flaggedByUser
+        likedByUser     = updPost.likedByUser
+        notifCenter.postNotificationName(kItemChangedNotification, object: self)
+    }
+    
+    func updatePost(note:NSNotification){
+        let dict = note.object as NSDictionary
+        setValuesForKeysWithDictionary(dict)
+        notifCenter.postNotificationName(kItemChangedNotification, object: self)
     }
 }
 

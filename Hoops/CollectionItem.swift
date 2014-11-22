@@ -9,7 +9,8 @@
 import Foundation
 
 class CollectionItem:NSObject{
-    let kItemChangedNotification            = "collectionItemChangedNotification"
+    let kItemChangedNotification    = "collectionItemChangedNotification"
+    let notifCenter                 = NSNotificationCenter.defaultCenter()
     
     var id                  : String    = ""
     var createdAt           : Int64     = 0

@@ -72,22 +72,18 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
         var nipName = UINib(nibName: "CommentTableCell", bundle:nil)
         self.tableView.registerNib(nipName, forCellReuseIdentifier: "commentCell")
 
-        var activityTime    = ActivityTime(timestamp:post!.createdOrUpdatedAt)
-        userLabel.text      = post!.owner.1
-        timeLabel.text      = activityTime.toString()
-        postLabel.text      = post!.text
-        noLikesLabel.text   = String(post!.likeCount)
-        noCommentsLabel.text = String(post!.commentCount)
-        hashtagButton.setTitle("#"+post!.hashtag.1, forState: UIControlState.Normal)
+        //update Post view
+        updatePost(post!)
+        notifCenter.addObserver(self, selector: "didReceivePostChangedNotification:", name: post!.kItemChangedNotification, object: post)
 
         //init feed
         let factory = FeedFactory.instance()
         feed = factory.postBasedCommentFeed(post!)
         
         //subscribe to feed changes
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadFeed:", name: feed!.notificationName, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasShown:", name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWasHidden:", name:UIKeyboardWillHideNotification, object: nil);
+        notifCenter.addObserver(self, selector: "reloadFeed:", name: feed!.notificationName, object: nil)
+        notifCenter.addObserver(self, selector: "keyboardWasShown:", name:UIKeyboardWillShowNotification, object: nil);
+        notifCenter.addObserver(self, selector: "keyboardWasHidden:", name:UIKeyboardWillHideNotification, object: nil);
         
         commentField.delegate = self
     }
@@ -186,4 +182,22 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
     }
     
     
+    func updatePost(post:Post){
+        self.post = post
+        
+        var activityTime    = ActivityTime(timestamp:post.createdOrUpdatedAt)
+        userLabel.text      = post.owner.1
+        timeLabel.text      = activityTime.toString()
+        postLabel.text      = post.text
+        noLikesLabel.text   = String(post.likeCount)
+        noCommentsLabel.text = String(post.commentCount)
+        hashtagButton.setTitle("#"+post.hashtag.1, forState: UIControlState.Normal)
+        noLikesButton.selected = post.likedByUser
+        reportButton.selected   = post.flaggedByUser
+    }
+    
+    func didReceivePostChangedNotification(note: NSNotification){
+        let post = note.object as Post
+        updatePost(post)
+    }
 }
