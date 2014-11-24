@@ -881,7 +881,6 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Hoops" id="Zvj-1r-lwJ">
-                        <barButtonItem key="backBarButtonItem" title="yes" id="d7z-Ub-riY"/>
                         <barButtonItem key="leftBarButtonItem" image="arrow395.png" id="rEr-to-VJp">
                             <inset key="imageInsets" minX="0.0" minY="23" maxX="34" maxY="16"/>
                             <connections>

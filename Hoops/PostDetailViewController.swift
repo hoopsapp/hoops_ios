@@ -55,7 +55,7 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func rehashButtonTapped(sender: AnyObject) {
-        performSegueWithIdentifier("postDetailViewToWriteViewSegue", sender: self)
+        performSegueWithIdentifier("postDetailViewToWritePostViewSegue", sender: self)
     }
     
     @IBAction func hashtagButtonTapped(sender: AnyObject) {
@@ -156,7 +156,7 @@ class PostDetailViewController: ViewController, UITableViewDelegate, UITableView
             vc.hashtag = Hashtag(id:post!.hashtag.0, title:post!.hashtag.1)
         }
         
-        if segue.identifier == "postDetailViewToWriteViewSegue"{
+        if segue.identifier == "postDetailViewToWritePostViewSegue"{
             let vc = segue.destinationViewController as WritePostViewController
             vc.sharedPost = post!
         }
