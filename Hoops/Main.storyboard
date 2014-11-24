@@ -338,7 +338,7 @@
         <!--Hoops-->
         <scene sceneID="XWc-de-p74">
             <objects>
-                <viewController storyboardIdentifier="PostDetailViewController" id="3rY-lK-YxS" customClass="PostDetailViewController" customModule="Hoops" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="3rY-lK-YxS" customClass="PostDetailViewController" customModule="Hoops" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nTw-jg-nDZ"/>
                         <viewControllerLayoutGuide type="bottom" id="bKb-tl-8YL"/>
@@ -443,7 +443,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeZ-Oo-I40">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeZ-Oo-I40">
                                 <rect key="frame" x="0.0" y="0.0" width="35" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="h4X-NK-9h9"/>
@@ -1515,9 +1515,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oKQ-Ez-X4h"/>
+        <segue reference="zxI-3v-agA"/>
         <segue reference="xi6-Yi-QJQ"/>
         <segue reference="qDo-2V-wN8"/>
-        <segue reference="bNA-9F-nZu"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
 </document>
